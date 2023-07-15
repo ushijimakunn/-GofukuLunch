@@ -64,6 +64,9 @@ NGINX
 
 カレゴリDB
 
+![image](https://github.com/ushijimakunn/-GofukuLunch/assets/98957780/e37f4d00-54a3-4d57-8841-bdafbe91be84)
+
+
 # 画面遷移図
 
 モバイルファーストで作成する
