@@ -9,7 +9,8 @@
             <p>会社からは、徒歩{{ $shop->distance_from_company }}分</p>
         </div>
         <div>
-            <a href="{{ route('shop.list') }}" class="btn"> 一覧に戻る </a>
+            <a href={{ route('shop.list') }} class="btn"> 一覧に戻る </a>
+            <a href={{ route('shop.edit', ['id' => $shop->id]) }} class="link">編集</a>
         </div>
     </div>
 @endsection

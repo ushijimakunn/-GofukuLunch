@@ -29,6 +29,9 @@
             </tbody>
         </table>
 
+        <div class="">
+            <a href={{ route('shop.new') }} class='link'>新しいお店の投稿</a>
+        </div>
     </div>
 
 @endsection
