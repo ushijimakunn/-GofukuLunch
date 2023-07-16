@@ -9,6 +9,7 @@ Route::get('/shop/edit/{id}', 'App\Http\Controllers\ShopController@edit')->name(
 Route::post('/shop/update/{id}', 'App\Http\Controllers\ShopController@update')->name('shop.update');
 
 Route::get('/shop/{id}', 'App\Http\Controllers\ShopController@show')->name('shop.detail');
+Route::delete('/shop/{id}', 'App\Http\Controllers\ShopController@destroy')->name('shop.destroy');
 
 Route::get('/', function () {
     return redirect('shops');

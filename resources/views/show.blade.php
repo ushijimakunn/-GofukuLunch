@@ -11,6 +11,9 @@
         <div>
             <a href={{ route('shop.list') }} class="btn"> 一覧に戻る </a>
             <a href={{ route('shop.edit', ['id' => $shop->id]) }} class="link">編集</a>
+            {{ Form::open([ 'method' => 'delete', 'route' => ['shop.destroy', $shop->id] ]) }}
+                {{ Form::submit('削除', ['class' => 'btn']) }}
+            {{ Form::close() }}
         </div>
     </div>
 @endsection
