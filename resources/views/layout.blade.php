@@ -37,6 +37,7 @@
             <li><a href="#">CCCC</a></li>
         </ul>
     </nav>
+
     @yield('content')
 </body>
 </html>

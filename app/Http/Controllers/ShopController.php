@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Shop;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
@@ -21,7 +22,8 @@ class ShopController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all()->pluck('category_name', 'id');
+        return view('new', ['categories' => $categories]);
     }
 
     /**
@@ -35,9 +37,10 @@ class ShopController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Shop $shop)
+    public function show($id)
     {
-        //
+        $shop = Shop::find($id);
+        return view('show', ['shop' => $shop]);
     }
 
     /**
