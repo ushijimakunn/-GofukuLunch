@@ -8,6 +8,14 @@
             <p>{{ $shop->shop_address }}</p>
             <p>会社からは、徒歩{{ $shop->distance_from_company }}分</p>
         </div>
+
+        <iframe id="map"
+            src="//www.google.com/maps/embed/v1/place?key=<?php echo $_ENV['GOOGLE_MAP_API'] ?>&q={{ $shop->shop_address }}"
+            width="60%"
+            height="320"
+            frameborder="0">
+        </iframe>
+
         <div>
             <a href={{ route('shop.list') }} class="btn"> 一覧に戻る </a>
             <a href={{ route('shop.edit', ['id' => $shop->id]) }} class="link">編集</a>
