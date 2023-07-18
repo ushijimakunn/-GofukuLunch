@@ -15,29 +15,41 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    <nav class="navbar bg-red-200">
+    <header class="navbar bg-red-200">
+
         <div class="flex-1">
             <div class="btn normal-case text-xl">
                 <span class="material-icons text-gray-500">home</span>
-                <h2 class="text-xl">GofukuLunch</h2>
+                <a href={{ route('shop.list') }} class="text-xl">GofukuLunch</a>
             </div>
         </div>
 
         {{-- Mobile menu btn --}}
         <div class="flex lg:hidden">
-            <button class="btn">
-                <span class="material-icons">menu</span>
+            <button class="btn" id='menu_btn'>
+                <span class="material-icons">
+                    menu
+                </span>
             </button>
         </div>
+        <ul class="menu absolute p-0 right-0 top-16 w-0 duration-500 bg-base-200 rounded-box text-base" id='main_nav'>
+            <li><a href={{ route('shop.list') }}>お店一覧</a></li>
+            <li><a href={{ route('shop.new') }}>新規投稿</a></li>
+        </ul>
 
         {{-- Desctop menu --}}
         <ul class="menu menu-horizontal hidden lg:flex lg:items-center bg-base-200 rounded-box text-base">
-            <li><a href="#">AAAA</a></li>
-            <li><a href="#">BBBB</a></li>
-            <li><a href="#">CCCC</a></li>
+            <li><a href={{ route('shop.list') }}>お店一覧</a></li>
+            <li><a href={{ route('shop.new') }}>新規投稿</a></li>
         </ul>
-    </nav>
+    </header>
 
     @yield('content')
+
+    <footer>
+
+    </footer>
+
+    <script src="{{ asset('js/main_nav.js') }}"></script>
 </body>
 </html>
