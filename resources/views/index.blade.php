@@ -29,8 +29,8 @@
             </tbody>
         </table>
 
-        <div class="">
-            <a href={{ route('shop.new') }} class='link'>新しいお店の投稿</a>
+        <div class="btn btn-primary">
+            <a href={{ route('shop.new') }} >新しいお店の投稿</a>
         </div>
     </div>
 @endsection
